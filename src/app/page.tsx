@@ -9,7 +9,7 @@ export default function HomePage() {
           Hi, I’m <span className="text-primary">Maxim</span>
         </h1>
         <p className="mb-6 max-w-xl text-base opacity-80 sm:text-lg">
-          I build fast, accessible web experiences with React &amp; Next.js.
+          I build small useful stuff for the web.
         </p>
         <div className="flex justify-center gap-4">
           <a href="#projects" className="btn btn-primary">
@@ -52,6 +52,7 @@ export default function HomePage() {
         <div className="avatar">
           {/* swap for your headshot */}
           <div className="w-32 rounded-full bg-base-200" />
+         
         </div>
 
         <div>
