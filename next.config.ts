@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+    domains: ['avars.githubusercontent.com'],
   },
   devIndicators: false,
 };

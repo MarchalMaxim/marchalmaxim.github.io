@@ -1,4 +1,5 @@
 import { HOMEPAGE } from "@/data/homepage/data";
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -34,7 +35,6 @@ export default function HomePage() {
               key={project.id}
               className="card cursor-pointer border transition hover:shadow-lg"
             >
-              {/* replace with Next/Image thumbnail */}
               <figure className="aspect-video bg-base-200" />
               <div className="card-body">
                 <h3 className="card-title">{project.title}</h3>
@@ -49,10 +49,21 @@ export default function HomePage() {
 
       {/* ── About snapshot ─────────────────────────────────────── */}
       <section className="container mx-auto mb-24 flex max-w-4xl flex-col items-center gap-6 px-4 text-center sm:flex-row sm:text-left">
-        <div className="avatar">
-          {/* swap for your headshot */}
-          <div className="w-32 rounded-full bg-base-200" />
-         
+        <div className="avatar avatar-online">
+          {/* <div className='w-24 ring-primary ring-offset-base-100 ring-2'>
+            <Image
+              src="https://avatars.githubusercontent.com/u/31852259?v=4"
+              alt="Your Name headshot"
+              fill
+              priority
+              className='rounded-full'
+            />
+          </div> */}
+
+          <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+            <Image src="https://avatars.githubusercontent.com/u/31852259?v=4" alt="Headshot of the author" className='rounded-full' fill />
+          </div>
+
         </div>
 
         <div>
