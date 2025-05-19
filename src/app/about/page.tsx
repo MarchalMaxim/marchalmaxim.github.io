@@ -10,11 +10,12 @@ export default function AboutPage() {
         <div className="avatar">
           <div className="w-48 h-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 overflow-hidden">
             <Image
-              src="/images/profile.jpg"
-              alt="Profile"
-              width={192}
-              height={192}
-              className="object-cover"
+              src="https://avatars.githubusercontent.com/u/31852259?v=4"
+              alt="Your Name headshot"
+              width={128}
+              height={128}
+              className="w-32 rounded-full"
+              priority
             />
           </div>
         </div>
@@ -41,7 +42,7 @@ export default function AboutPage() {
       {/* Experience */}
       <section className="container mx-auto mt-16">
         <h2 className="text-3xl font-semibold mb-6">Experience</h2>
-        <Timeline items={EXPERIENCES}/>
+        <Timeline items={EXPERIENCES} />
       </section>
 
       {/* Contact CTA */}
