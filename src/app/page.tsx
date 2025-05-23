@@ -1,5 +1,5 @@
-import { HOMEPAGE } from "@/data/homepage/data";
 import Image from 'next/image';
+import { ProjectsOverview } from "./components/ProjectsOverview";
 
 export default function HomePage() {
   return (
@@ -23,29 +23,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured projects (placeholder cards) ─────────────── */}
-      <section
-        id="projects"
-        className="container mx-auto mb-24 max-w-6xl space-y-8 px-4"
-      >
-        <h2 className="text-2xl font-semibold">Featured projects</h2>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {HOMEPAGE.projects.map((project) => (
-            <article
-              key={project.id}
-              className="card cursor-pointer border transition hover:shadow-lg"
-            >
-              <figure className="aspect-video bg-base-200" />
-              <div className="card-body">
-                <h3 className="card-title">{project.title}</h3>
-                <p className="opacity-80">
-                  {project.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ProjectsOverview/>
 
       {/* ── About snapshot ─────────────────────────────────────── */}
       <section className="container mx-auto mb-24 flex max-w-4xl flex-col items-center gap-6 px-4 text-center sm:flex-row sm:text-left">
