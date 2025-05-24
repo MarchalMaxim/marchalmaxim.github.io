@@ -1,35 +1,45 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+// components/Timeline.tsx
 import React from 'react';
 
-export interface TimelineProps {
-  items: Array<{
-    date: string;
-    title: string;
-    description: string;
-  }>;
+export interface TimelineItem {
+  date: string;
+  title: string;
+  description: string;
 }
 
-export function Timeline({ items }: TimelineProps) {
-  // Shared check‑icon SVG for all timeline points
-//   const icon = (
-//     <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       viewBox="0 0 20 20"
-//       fill="currentColor"
-//       className="h-5 w-5"
-//     >
-//       <path
-//         fillRule="evenodd"
-//         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-//         clipRule="evenodd"
-//       />
-//     </svg>
-//   );
+export interface TimelineProps {
+  items: TimelineItem[];
+}
 
+/**
+ * Clean vertical timeline on the **left** side only – mirrors the
+ * "vertical-left" demo in DaisyUI docs.
+ */
+export function Timeline({ items }: TimelineProps) {
   return (
-    <ul className="timeline max-w-3xl mx-auto">
-      {items.map((item, _) => (
-        <div key={item.description}>{item.title}</div>
+    <ul className="timeline timeline-vertical mx-auto w-full max-w-3xl">
+      {items.map((item, idx) => (
+        <li key={`${item.date}-${item.title}`}>
+          {/* --- date label (left column) --- */}
+          <hr />
+          <div className="timeline-start w-28 pr-2 text-right text-sm font-medium opacity-60">
+            {item.date}
+          </div>
+
+          {/* --- dot (middle column) --- */}
+          <div className="timeline-middle">
+            <span className="block h-3 w-3 rounded-full bg-primary"></span>
+          </div>
+
+          {/* --- content box (right column) --- */}
+          <div className="timeline-box timeline-end">
+            <h3 className="mb-1 font-semibold leading-tight">{item.title}</h3>
+            <p className="text-sm opacity-80">{item.description}</p>
+          </div>
+
+          {/* --- connector line (except after last item) --- */}
+          <hr />
+        </li>
       ))}
     </ul>
   );
