@@ -8,7 +8,6 @@ export default function ClientProviders({ children }: { children: ReactNode }) {
     <ThemeProvider
       attribute="data-theme"        /* ← puts name on <html data-theme="…"> */
       defaultTheme="maxport"         /* ‘system’, ‘maxport’, or ‘maxport-light’ */
-      // enableSystem
       disableTransitionOnChange     /* avoids CSS transition flash */
     >
       {children}
