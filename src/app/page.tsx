@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ProjectsOverview } from "./components/ProjectsOverview";
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -38,9 +39,7 @@ export default function HomePage() {
           <p className="max-w-prose opacity-80">
             I make small tools for the web. Mostly practical stuff, sometimes just for fun. Here’s a bit more about me.
           </p>
-          <a href="/about" className="btn btn-link no-underline">
-            Read more →
-          </a>
+          <Link href="/about" className="btn btn-link no-underline mt-4"> Read more → </Link>
         </div>
       </section>
 

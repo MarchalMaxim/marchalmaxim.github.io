@@ -18,7 +18,7 @@ export interface TimelineProps {
 export function Timeline({ items }: TimelineProps) {
   return (
     <ul className="timeline timeline-vertical mx-auto w-full max-w-3xl">
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <li key={`${item.date}-${item.title}`}>
           {/* --- date label (left column) --- */}
           <hr />
