@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
     domains: ['avars.githubusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.maximmarchal.nl',
+      },
+    ]
   },
   devIndicators: false,
 };
