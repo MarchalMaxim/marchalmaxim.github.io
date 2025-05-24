@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ProjectsOverview } from "./components/ProjectsOverview";
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -23,36 +24,22 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured projects (placeholder cards) ─────────────── */}
-      <ProjectsOverview/>
+      <ProjectsOverview />
 
       {/* ── About snapshot ─────────────────────────────────────── */}
       <section className="container mx-auto mb-24 flex max-w-4xl flex-col items-center gap-6 px-4 text-center sm:flex-row sm:text-left">
         <div className="avatar avatar-online">
-          {/* <div className='w-24 ring-primary ring-offset-base-100 ring-2'>
-            <Image
-              src="https://avatars.githubusercontent.com/u/31852259?v=4"
-              alt="Your Name headshot"
-              fill
-              priority
-              className='rounded-full'
-            />
-          </div> */}
-
           <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
             <Image src="https://avatars.githubusercontent.com/u/31852259?v=4" alt="Headshot of the author" className='rounded-full' fill />
           </div>
-
         </div>
 
         <div>
           <h2 className="mb-2 text-2xl font-semibold">About me</h2>
           <p className="max-w-prose opacity-80">
-            Short intro that links to the full About page. Keep it to 2–3
-            sentences so the home remains skim-friendly.
+            I make small tools for the web. Mostly practical stuff, sometimes just for fun. Here’s a bit more about me.
           </p>
-          <a href="/about" className="btn btn-link no-underline">
-            Read more →
-          </a>
+          <Link href="/about" className="btn btn-link no-underline mt-4"> Read more → </Link>
         </div>
       </section>
 

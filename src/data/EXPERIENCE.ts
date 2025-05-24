@@ -1,17 +1,22 @@
 export const EXPERIENCES = [
     {
-        date: "2023 - Present",
-        title: "Fullstack Developer",
+        date: "2024 - 2025",
+        title: "Software Consultant @ Navara",
         description: "Working on various projects using Next.js, React, and Tailwind CSS.",
     },
     {
-        date: "2022 - 2023",
-        title: "Frontend Developer",
-        description: "Developed user interfaces and improved user experience for web applications.",
+        date: "2023 - 2024",
+        title: "Fullstack Developer @ ORTEC",
+        description: "Transitioned to a fullstack role, focusing on building scalable web applications.",
     },
     {
-        date: "2021 - 2022",
-        title: "Intern Developer",
-        description: "Assisted in the development of web applications and learned about modern web technologies.",
+        date: "2022 - 2023",
+        title: "SDE Trainee @ ORTEC",
+        description: "Traineeship focused on software development practices at ORTEC, a global optimization software company.",
     },
+    {
+        date: '2019',
+        title: 'Summer Development Internship @ TOPDesk',
+        description: 'Worked on a proof-of-concept word embedding model for improving the lives of support agents.',
+    }
 ]
