@@ -18,7 +18,7 @@ jobs:
           node-version: 20
 
       - run: npm ci
-      - run: npm run build && npm run static
+      - run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
