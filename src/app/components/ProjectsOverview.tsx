@@ -15,7 +15,6 @@ export function ProjectsOverview() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((project) => (
           <Link key={project.id} href={`/projects/${project.slug}`}> 
-            {/* <a className="card cursor-pointer border transition hover:shadow-lg"> */}
               <figure className="aspect-video bg-base-200 relative">
                 <Image
                   src={project.image}
@@ -28,7 +27,6 @@ export function ProjectsOverview() {
                 <h3 className="card-title">{project.title}</h3>
                 <p className="opacity-80">{project.tagline}</p>
               </div>
-            {/* </a> */}
           </Link>
         ))}
       </div>
