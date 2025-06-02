@@ -22,14 +22,14 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     image: `/assets/images/resize-responsibly-cropped.PNG`,
     links: {
-      live: "",
-      repo: ""
+      live: "https://github.com/MarchalMaxim/Resize-Responsibly",
+      repo: "https://github.com/MarchalMaxim/Resize-Responsibly"
     }
   },
   {
     id: 2,
     slug: "kilometer-schrijven",
-    title: "Kilometerschrijven",
+    title: "Kilometerschrijven (beta)",
     tagline: "A smart proxy between Google Sheets and Google Maps that logs business mileage, caches distance look-ups and gracefully handles API quota limits—bookkeeping without the busywork.",
     description: "Mileage Bridge seamlessly syncs your business trip data from Google Maps into Google Sheets, applying intelligent caching and fallback for the Maps API to keep your logs accurate without exceeding quotas.",
     featured: true,
