@@ -1,45 +1,41 @@
-
-import ProjectPage from "@/app/components/ProjectPage";
-import { PROJECTS } from "@/data/PROJECTS";
+// app/projects/[slug]/page.tsx
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-
-interface Props {
-  params: { slug: string };
-}
+import { PROJECTS } from "@/data/PROJECTS";
+import ProjectPage from "@/app/components/ProjectPage";
 
 export function generateStaticParams() {
-  return PROJECTS.map(({ slug }) => ({ slug }));
+    return PROJECTS.map(({ slug }) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = PROJECTS.find(p => p.slug === params.slug)!;
-  return {
-    title: project.title,
-    description: project.tagline,
-    openGraph: {
-      images: [project.image],
-    },
-  };
+export async function generateMetadata(
+    { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+    const { slug } = await params;
+
+    const project = PROJECTS.find(p => p.slug === slug);
+    if (!project) return {};
+
+    const og = typeof project.image === "string"
+        ? project.image
+        : project.image.src;
+
+    return {
+        title: project.title,
+        description: project.tagline,
+        openGraph: { images: [og] },
+    };
 }
 
-export default function ProjectSlugPage({ params }: Props) {
-  const project = PROJECTS.find(p => p.slug === params.slug);
+/* ——— 2. Page component must also be async ——— */
+export default async function ProjectSlugPage(
+    { params }: { params: Promise<{ slug: string }> }
+) {
+    const { slug } = await params;
+    const project = PROJECTS.find(p => p.slug === slug);
+    if (!project) notFound();
 
-  if (!project) {
-    // You could render a custom 404 here instead
-    throw new Error("Project not found");
-  }
+    const gallery = project.gallery ?? [];
 
-  return (
-    <ProjectPage {...project}>
-      {/* OPTIONAL custom content per project */}
-      {project.slug === "resize-responsibly" && (
-        <ul className="mt-4 list-disc pl-6">
-          <li>Domain-wide crawler with robots.txt honouring</li>
-          <li>Headless Chrome screenshots at 5 breakpoints</li>
-          <li>Slack + email alerts when layouts break</li>
-        </ul>
-      )}
-    </ProjectPage>
-  );
+    return <ProjectPage {...project} gallery={gallery} />;
 }
