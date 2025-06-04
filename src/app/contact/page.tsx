@@ -1,9 +1,9 @@
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const ContactPage = () => {
-  const email = "your.email@example.com"; // Replace with your actual email
-  const GITHUB_USERNAME = "yourusername"; // Replace with your GitHub username
-  const LINKEDIN_PROFILE_ID = "yourprofileid"; // Replace with your LinkedIn profile ID
+  const email = "maximalexandermarchal@gmail.com";
+  const GITHUB_USERNAME = "marchalmaxim";
+  const LINKEDIN_PROFILE_ID = "maxim-marchal";
 
   // Basic email obfuscation: replace "." and "@"
   const obfuscatedEmail = email.replace(/\./g, " [dot] ").replace(/@/g, " [at] ");
