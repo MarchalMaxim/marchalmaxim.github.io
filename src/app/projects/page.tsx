@@ -9,7 +9,7 @@ export default function ProjectsPage() {
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
           My Projects
         </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+        <p className="mt-4 max-w-2xl mx-auto text-lg">
           A collection of projects I&apos;ve built.
         </p>
       </div>
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         {PROJECTS.map((project, index) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row items-stretch overflow-hidden rounded-lg border border-gray-200 shadow-sm"
+            className="flex flex-col md:flex-row items-stretch overflow-hidden rounded-lg border border-primary shadow-md shadow-primary/20"
           >
             <Link
               href={`/projects/${project.slug}`}
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
                   {project.title}
                 </h3>
               </Link>
-              <p className="mt-2 text-gray-600 dark:text-gray-400">{project.tagline}</p>
+              <p className="mt-2">{project.tagline}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.skills.map((skill) => (
                   <span
@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                   </span>
                 ))}
               </div>
-              <p className="mt-4 text-gray-500 dark:text-gray-300 flex-grow">
+              <p className="mt-4 flex-grow">
                 {project.description}
               </p>
               <div className="mt-6 flex items-center justify-end gap-4">
