@@ -30,6 +30,7 @@ export interface ProjectMeta {
     live?: string;
     repo?: string;
   };
+  skills: string[];
 }
 
 /* ---------- data ---------- */
@@ -46,6 +47,7 @@ export const PROJECTS: ProjectMeta[] = [
     image: resizeHero,
     gallery: [resizeSlide1, resizeSlide2],
     links: { live: "", repo: "" },
+    skills: ["Next.js", "Selenium", "Web Scraping", "UI Automation"],
   },
   {
     id: 2,
@@ -59,6 +61,7 @@ export const PROJECTS: ProjectMeta[] = [
     image: kmsHero,
     gallery: [kmsSlide1, kmsSlide2],
     links: { live: "https://kilometerschrijven.nl", repo: "" },
+    skills: ["Google APIs", "Node.js", "Caching Strategies", "OAuth", "Rate limiting strategies"],
   },
   {
     id: 3,
@@ -71,5 +74,11 @@ export const PROJECTS: ProjectMeta[] = [
     featured: true,
     image: mapHero,
     links: { live: "", repo: "" },
+    skills: [
+      "Data Visualization",
+      "P5js",
+      "Javascript",
+      "Natural Language Processing",
+    ],
   },
 ];
