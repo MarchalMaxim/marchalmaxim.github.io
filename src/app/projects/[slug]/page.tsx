@@ -42,18 +42,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
             {project.title}
           </h1>
-          <p className="mt-4 text-lg text-gray-500">{project.tagline}</p>
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">{project.tagline}</p>
           <div className="mt-6 flex flex-wrap gap-2">
             {project.skills.map((skill) => (
               <span
                 key={skill}
-                className="badge badge-primary badge-outline"
+                className="badge badge-primary badge-outline transition-all duration-200 hover:bg-primary hover:text-primary-content hover:scale-105"
               >
                 {skill}
               </span>
             ))}
           </div>
-          <p className="mt-6 text-gray-600">{project.description}</p>
+          <p className="mt-6 text-gray-600 dark:text-gray-300">{project.description}</p>
           <div className="mt-8 flex items-center gap-4">
             {project.links.repo && (
               <Link

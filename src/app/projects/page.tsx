@@ -18,45 +18,45 @@ export default function ProjectsPage() {
         {PROJECTS.map((project, index) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row items-stretch overflow-hidden rounded-lg border border-gray-200 shadow-sm relative group"
+            className="flex flex-col md:flex-row items-stretch overflow-hidden rounded-lg border border-gray-200 shadow-sm"
           >
             <Link
               href={`/projects/${project.slug}`}
-              className="absolute inset-0 z-10"
-            >
-              <span className="sr-only">View project</span>
-            </Link>
-            <div
-              className={`relative w-full md:w-1/2 h-64 md:h-auto ${
+              className={`group relative block w-full md:w-1/2 h-64 md:h-auto ${
                 index % 2 !== 0 ? "md:order-last" : ""
               }`}
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill={true}
-                className="object-cover"
-              />
-            </div>
+              <div className="overflow-hidden h-full w-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill={true}
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </Link>
+
             <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
-              <h3 className="text-2xl font-bold group-hover:underline">
-                {project.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{project.tagline}</p>
+              <Link href={`/projects/${project.slug}`}>
+                <h3 className="text-2xl font-bold hover:underline">
+                  {project.title}
+                </h3>
+              </Link>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">{project.tagline}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="badge badge-primary badge-outline transition-transform hover:scale-110"
+                    className="badge badge-primary badge-outline transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-primary-content"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-              <p className="mt-4 text-gray-500 flex-grow">
+              <p className="mt-4 text-gray-500 dark:text-gray-300 flex-grow">
                 {project.description}
               </p>
-              <div className="mt-6 flex items-center justify-end gap-4 relative z-20">
+              <div className="mt-6 flex items-center justify-end gap-4">
                 {project.links.repo && (
                   <Link
                     href={project.links.repo}
