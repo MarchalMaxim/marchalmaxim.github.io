@@ -1,5 +1,10 @@
 export const EXPERIENCES = [
     {
+        date: "2025 - Present",
+        title: "Software developer @ AFAS Software",
+        description: "Working as a full-stack developer at AFAS, focusing mainly on the Profit and InSite applications"
+    },
+    {
         date: "2024 - 2025",
         title: "Software Consultant @ Navara",
         description: "Working on various projects using Next.js, React, and Tailwind CSS.",
