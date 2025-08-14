@@ -81,4 +81,21 @@ export const PROJECTS: ProjectMeta[] = [
       "Natural Language Processing",
     ],
   },
+  {
+    id: 4,
+    slug: "afas-software",
+    title: "AFAS Software",
+    tagline:
+      "Software Developer working on Profit and Insite applications.",
+    description:
+      "Since July 2025, I have been a software developer at AFAS Software, contributing to the Profit and Insite applications and helping deliver business-critical solutions.",
+    featured: false,
+    image: "",
+    links: { live: "https://www.afas.nl/", repo: "" },
+    skills: [
+      "C#",
+      "Typescript",
+      "Enterprise Applications",
+    ],
+  },
 ];
