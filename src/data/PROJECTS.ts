@@ -5,6 +5,7 @@ import type { StaticImageData } from "next/image";
 import resizeHero from "@public/projects/resize-responsibly/hero.png";
 import kmsHero    from "@public/projects/kilometerschrijven/hero.png";
 import mapHero    from "@public/projects/map-my-chat/hero.png";
+import tsPlaygroundHero from "@public/projects/typescript-playground/hero.png";
 
 /* ---------- optional galleries ---------- */
 import resizeSlide1 from "@public/projects/resize-responsibly/gallery-1.png";
@@ -79,6 +80,24 @@ export const PROJECTS: ProjectMeta[] = [
       "P5js",
       "Javascript",
       "Natural Language Processing",
+    ],
+  },
+  {
+    id: 4,
+    slug: "typescript-playground",
+    title: "TypeScript Playground",
+    tagline:
+      "A playground for testing out AST transformers for TypeScript.",
+    description:
+      "TypeScript Playground is an interactive environment for experimenting with Abstract Syntax Tree (AST) transformers for TypeScript. Test, debug, and visualize code transformations in real-time.",
+    featured: true,
+    image: tsPlaygroundHero,
+    links: { live: "https://maximmarchal.nl/typescript-playground", repo: "" },
+    skills: [
+      "TypeScript",
+      "AST",
+      "Code Transformation",
+      "Compiler Design",
     ],
   },
 
