@@ -72,7 +72,7 @@ export const PROJECTS: ProjectMeta[] = [
       "Turns raw WhatsApp conversations into interactive timelines, heat-maps and word clouds, giving you instant visual insights into your chats.",
     description:
       "MapMyChat parses exported WhatsApp conversation histories and generates interactive timeline charts, heat maps, and word clouds, letting you explore your chat patterns visually.",
-    featured: true,
+    featured: false,
     image: mapHero,
     links: { live: "", repo: "" },
     skills: [
