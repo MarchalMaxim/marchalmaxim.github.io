@@ -55,13 +55,13 @@ export const PROJECTS: ProjectMeta[] = [
     slug: "kilometer-schrijven",
     title: "Kilometerschrijven",
     tagline:
-      "A smart proxy between Google Sheets and Google Maps that logs business mileage, caches distance look-ups and gracefully handles API quota limits—bookkeeping without the busywork.",
+      "A smart proxy between Google Sheets and Google Maps that logs business mileage, caches distance look-ups and gracefully handles API quota limits—bookkeeping without the busywork. Currently in beta.",
     description:
-      "Mileage Bridge seamlessly syncs your business trip data from Google Maps into Google Sheets, applying intelligent caching and fallback for the Maps API to keep your logs accurate without exceeding quotas.",
+      "Mileage Bridge seamlessly syncs your business trip data from Google Maps into Google Sheets, applying intelligent caching and fallback for the Maps API to keep your logs accurate without exceeding quotas. Currently in beta.",
     featured: true,
     image: kmsHero,
     gallery: [kmsSlide1, kmsSlide2],
-    links: { live: "https://kilometerschrijven.nl", repo: "" },
+    links: { live: "https://powerful-vertex-385120.web.app/", repo: "" },
     skills: ["Google APIs", "Node.js", "Caching Strategies", "OAuth", "Rate limiting strategies"],
   },
   {
